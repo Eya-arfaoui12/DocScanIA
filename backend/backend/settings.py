@@ -7,6 +7,7 @@ from decouple import config
 from datetime import timedelta
 import os
 from dotenv import load_dotenv
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -72,22 +73,21 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.getenv("DB_NAME"),
-#         'USER': os.getenv("DB_USER"),
-#         'PASSWORD': os.getenv("DB_PASSWORD"),
-#         'HOST': os.getenv("DB_HOST"),
-#         'PORT': os.getenv("DB_PORT"),
+#         'NAME': os.getenv("DB_NAME", "DocScan"),  # ✅ Valeur par défaut
+#         'USER': os.getenv("DB_USER", "postgres"),
+#         'PASSWORD': os.getenv("DB_PASSWORD", "admin"),
+#         'HOST': os.getenv("DB_HOST", "localhost"),  # ✅ localhost pour dev, db pour Docker
+#         'PORT': os.getenv("DB_PORT", "5432"),
 #     }
 # }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("DB_NAME", "DocScan"),  # ✅ Valeur par défaut
-        'USER': os.getenv("DB_USER", "postgres"),
-        'PASSWORD': os.getenv("DB_PASSWORD", "admin"),
-        'HOST': os.getenv("DB_HOST", "localhost"),  # ✅ localhost pour dev, db pour Docker
-        'PORT': os.getenv("DB_PORT", "5432"),
-    }
+    'default': dj_database_url.config(
+        default=os.getenv(
+            "DATABASE_URL",
+            "postgresql://postgres:admin@localhost:5432/DocScan"
+        )
+    )
 }
 
 # Chemin vers les health checks (pour documentation)

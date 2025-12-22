@@ -38,3 +38,5 @@ gdown==5.2.0
 
 
 protobuf==6.33.2
+
+dj-database-url==3.0.1
