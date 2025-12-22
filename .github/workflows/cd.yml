@@ -64,7 +64,7 @@ jobs:
           cat deployment_report.txt
       
       - name: 📤 Publier artefact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: deployment-report
           path: deployment_report.txt
