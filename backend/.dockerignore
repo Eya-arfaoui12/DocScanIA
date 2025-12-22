@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+/media
+/staticfiles
+*.pot
+
+# Ignorer seulement les fichiers du modèle, pas le code Python
+# ml_models/model/
+# ml_models/*.bin
+# ml_models/*.safetensors
+# ml_models/*.json
+# ml_models/*.txt
+# ml_models/*.h5
+# ml_models/*.pkl
+# ml_models/*.pth
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Autres
+*.md
+.env
+*.bak

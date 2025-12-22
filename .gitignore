@@ -1,0 +1,40 @@
+# Fichiers modèles IA
+*.h5
+*.pkl
+*.pt
+*.pth
+*.bin
+*.onnx
+*.pb
+*.safetensors
+*.model
+
+# Dossier modèles spécifique
+backend/ml_models/model/*
+!backend/ml_models/model/.gitkeep
+!backend/ml_models/model/README.md
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.benchmarks/
+
+# Environnement
+.env
+*.log
+db.sqlite3
+
+# Frontend
+node_modules/
+build/
+dist/
+
+# Autres
+.DS_Store
+*.swp
+
+
+# Docker
+*.log

@@ -1,0 +1,35 @@
+# ===========================================
+# DÉPENDANCES DE TEST
+# ===========================================
+
+# Framework de test
+pytest==7.4.3
+pytest-django==4.7.0
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+pytest-xdist==3.5.0          # Pour paralléliser les tests
+
+# Génération de données de test
+factory-boy==3.3.0
+faker==22.0.0
+
+# Couverture de code
+coverage==7.4.0
+
+pytest-html==4.1.1 # Rapports HTML
+pytest-timeout==2.2.0 # Timeout pour les tests lents
+
+
+
+# Mock et fixtures
+responses==0.24.1  # Pour mocker les requêtes HTTP
+freezegun==1.4.0  # Pour mocker les dates/temps
+
+
+# Qualité de code
+flake8==7.0.0
+black==24.1.0
+
+# Tests de performance
+locust==2.20.0               # Pour les tests de charge
+pytest-benchmark==4.0.0      # Pour les benchmarks

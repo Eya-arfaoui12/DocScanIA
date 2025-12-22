@@ -1,0 +1,37 @@
+# Django
+Django==4.2.7
+djangorestframework==3.16.1
+django-cors-headers==4.9.0
+pillow==12.0.0
+
+# Authentication Knox
+django-rest-knox==4.2.0
+
+# DB
+psycopg2-binary==2.9.11
+
+# PDF Generation
+reportlab==4.0.7
+
+# Machine Learning - Version CPU uniquement (beaucoup plus légère!)
+torch==2.9.1+cpu
+torchvision==0.24.1+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+transformers==4.57.1
+sentencepiece==0.2.1
+
+# OCR
+pytesseract==0.3.10
+opencv-python-headless==4.12.0.88
+
+# Utilitaires
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.6.1
+python-decouple==3.8
+python-dotenv==1.2.1
+gunicorn==23.0.0
+whitenoise==6.11.0
+
+
+gdown==5.2.0
