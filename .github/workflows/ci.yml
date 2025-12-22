@@ -61,6 +61,7 @@ jobs:
           DATABASE_URL: postgresql://testuser:testpass@localhost:5432/testdb
           SECRET_KEY: test-secret-key-for-ci-cd-pipeline
           DEBUG: 'True'
+          DEFAULT_FROM_EMAIL: noreply@test.com
         run: |
           python manage.py check
       
@@ -70,6 +71,7 @@ jobs:
           DATABASE_URL: postgresql://testuser:testpass@localhost:5432/testdb
           SECRET_KEY: test-secret-key-for-ci-cd-pipeline
           DEBUG: 'True'
+          DEFAULT_FROM_EMAIL: noreply@test.com
         run: |
           python manage.py migrate --noinput
       
@@ -79,6 +81,7 @@ jobs:
           DATABASE_URL: postgresql://testuser:testpass@localhost:5432/testdb
           SECRET_KEY: test-secret-key-for-ci-cd-pipeline
           DEBUG: 'True'
+          DEFAULT_FROM_EMAIL: noreply@test.com
         run: pytest -m "not ml"
 
   test-frontend:
