@@ -4,6 +4,7 @@ Tests pour le parseur de documents
 import pytest
 from ml_models.document_parser import DocumentParser
 
+pytestmark = pytest.mark.ml
 
 class TestDocumentParser:
     """Tests pour la classe DocumentParser"""

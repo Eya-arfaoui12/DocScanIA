@@ -9,6 +9,7 @@ from PIL import Image
 from unittest.mock import patch, MagicMock
 from ml_models.ml_service import MLClassifierService, get_classifier
 
+pytestmark = pytest.mark.ml
 
 @pytest.fixture
 def temp_image():
