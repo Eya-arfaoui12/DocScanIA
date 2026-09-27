@@ -135,14 +135,3 @@ Backend tests use pytest. From the `backend/` directory, install the test requir
 pip install -r requirements.txt -r requirements-test.txt
 pytest
 ```
-
-## Security Notes
-
-- The example credentials and Django secret key are for local development only.
-- Keep `.env` files and production secrets out of version control.
-- Set `DEBUG=False`, define appropriate allowed hosts and CORS origins, and use strong credentials in deployed environments.
-- Configure HTTPS and secure persistent storage for uploaded documents in production.
-
-## License
-
-See [frontend_finale/LICENSE.md](frontend_finale/LICENSE.md) for the license included with the frontend template. Check the licenses of the other project components and dependencies before redistribution.
