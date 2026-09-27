@@ -1,5 +1,7 @@
 # DocScanAI
 
+<img width="1501" height="708" alt="home" src="https://github.com/user-attachments/assets/be93b395-d184-4bc5-ad70-259e81189bea" />
+
 DocScanAI is a web application for uploading, classifying, and managing documents. It combines a React frontend with a Django REST API, PostgreSQL storage, and an OCR and machine-learning processing pipeline.
 
 ## Features
